@@ -1,0 +1,17 @@
+tdq.testnet
+flyingtung.testnet
+
+nft-contract.flyingtung.testnet
+market_contract.flyingtung.testnet
+
+fuction để xem token 1 user sử hữu 
+
+
+fn trả về thông tin từng asset
+near view nft-contract.flyingtung.testnet nft_token '{"token_id": "token-1"}'
+
+fn list asset cua 1 user theo account_id
+near view nft-contract.flyingtung.testnet nft_tokens_for_owner '{"account_id": "'flyingtung.testnet'", "limit": 10}'
+
+mint
+near call nft-contract.youraccountname.testnet nft_mint '{"token_id": "token-1", "metadata": {"title": "My Non Fungible Team Token", "description": "The Team Most Certainly Goes :)", "media": "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif"}, "receiver_id": "youraccountname.testnet"}' --accountId youraccountname.testnet --amount 0.1
